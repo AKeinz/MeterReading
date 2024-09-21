@@ -1,0 +1,14 @@
+C:\Users\user\source\repos\MeterReading\MeterReading\bin\Debug\MeterReading.exe.config
+C:\Users\user\source\repos\MeterReading\MeterReading\bin\Debug\MeterReading.exe
+C:\Users\user\source\repos\MeterReading\MeterReading\bin\Debug\MeterReading.pdb
+C:\Users\user\source\repos\MeterReading\MeterReading\obj\Debug\MeterReading.csproj.AssemblyReference.cache
+C:\Users\user\source\repos\MeterReading\MeterReading\obj\Debug\MeterReading.csproj.CoreCompileInputs.cache
+C:\Users\user\source\repos\MeterReading\MeterReading\obj\Debug\MeterReading.exe
+C:\Users\user\source\repos\MeterReading\MeterReading\obj\Debug\MeterReading.pdb
+C:\Users\user\Desktop\MeterReading\MeterReading\MeterReading\MeterReading\bin\Debug\MeterReading.exe.config
+C:\Users\user\Desktop\MeterReading\MeterReading\MeterReading\MeterReading\bin\Debug\MeterReading.exe
+C:\Users\user\Desktop\MeterReading\MeterReading\MeterReading\MeterReading\bin\Debug\MeterReading.pdb
+C:\Users\user\Desktop\MeterReading\MeterReading\MeterReading\MeterReading\obj\Debug\MeterReading.csproj.AssemblyReference.cache
+C:\Users\user\Desktop\MeterReading\MeterReading\MeterReading\MeterReading\obj\Debug\MeterReading.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\MeterReading\MeterReading\MeterReading\MeterReading\obj\Debug\MeterReading.exe
+C:\Users\user\Desktop\MeterReading\MeterReading\MeterReading\MeterReading\obj\Debug\MeterReading.pdb
