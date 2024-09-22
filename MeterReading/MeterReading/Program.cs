@@ -11,7 +11,7 @@ namespace MeterReading
         
         static void Main(string[] args)
         {
-           
+            Console.WriteLine(ReadFromFile.ReadFile());
         }
     }
 }

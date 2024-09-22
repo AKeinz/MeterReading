@@ -45,6 +45,7 @@
   <ItemGroup>
     <Compile Include="Meter.cs" />
     <Compile Include="ElectricityMeter.cs" />
+    <Compile Include="ReadFromFile.cs" />
     <Compile Include="WaterMeter.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
