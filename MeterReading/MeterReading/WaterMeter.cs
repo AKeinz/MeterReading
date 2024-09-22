@@ -6,13 +6,11 @@ using System.Threading.Tasks;
 
 namespace MeterReading
 {
-    public class Meter
+    internal class WaterMeter: Meter
     {
-        public string ResourceType { get; set; } = "";
-        public DateTime DateOfReading { get; set; }
-        public double Value { get; set; }
+        public string TypeOfWater {  get; set; }
 
-        public virtual Meter SetMeterData(int endOfTypeIndex, string[] dataArray)
+        public override Meter SetMeterData(int endOfTypeIndex, string[] dataArray)
         {
             for (int index = 0; index <= endOfTypeIndex; index++)
             {
@@ -20,12 +18,14 @@ namespace MeterReading
             }
             DateOfReading = DateTime.Parse(dataArray[endOfTypeIndex + 1]);
             Value = Double.Parse(dataArray[endOfTypeIndex + 2].Replace('.', ','));
+            TypeOfWater = dataArray[endOfTypeIndex + 3];
             return this;
         }
 
-        public virtual string GetMeterData()
+        public override string GetMeterData()
         {
-            string output = "ResourceType: " + ResourceType + "\nDate: " + DateOfReading + "\nValue: " + Value + "\n";
+            string output = "ResourceType: " + ResourceType + "\nDate: " + DateOfReading + "\nValue: " + Value
+                + "\nTypeOfWater: " + TypeOfWater + "\n";
             return output;
         }
     }

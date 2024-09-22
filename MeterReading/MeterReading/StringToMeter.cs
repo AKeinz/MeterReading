@@ -11,11 +11,13 @@ namespace MeterReading
     internal class StringToMeter
     {
         public static Meter MeterInProcess;
+        static bool IsRightInput = false;
+        static List<Meter> meters = new List<Meter>();
 
         public static bool TrySetMeterData(string input)
         {
             string[] data = toDataArrayWithSingleSpaces(input);
-            bool IsRightInput = checkData(data);
+            IsRightInput = checkData(data);
             if (IsRightInput) { return true; }
             return false;
         }
@@ -44,7 +46,7 @@ namespace MeterReading
                 int endOfTypeIndex = Array.FindIndex(dataArray, word => word.EndsWith("\'") || word.EndsWith("\""));
                 bool isTryParseDate = DateTime.TryParse(dataArray[endOfTypeIndex + 1], out forTryParseDate);
                 bool isTryParseValue = Double.TryParse(dataArray[endOfTypeIndex + 2].Replace('.', ','), out forTryParseValue);
-                if ((dataArray.Length - 1) - endOfTypeIndex == 2 && isTryParseDate && isTryParseValue && 
+                if ((dataArray.Length - 1) - endOfTypeIndex == 3 && isTryParseDate && isTryParseValue && 
                     forTryParseValue>=0 && forTryParseDate<DateTime.Now)
                 {
                     setMeterData(endOfTypeIndex, dataArray);
@@ -56,14 +58,17 @@ namespace MeterReading
 
         private static void setMeterData(int endOfTypeIndex, string[] dataArray)
         {
-            Meter meter = new Meter();
-            for (int index = 0; index <= endOfTypeIndex; index++)
+            Meter meter = new ElectricityMeter();
+            MeterInProcess = meter.SetMeterData(endOfTypeIndex, dataArray);
+            meters.Add(meter);
+        }
+        public static string GetMeterData()
+        {
+            if (IsRightInput)
             {
-                meter.MeterType += dataArray[index] + " ";
+                return MeterInProcess.GetMeterData();
             }
-            meter.DateOfReading = DateTime.Parse(dataArray[endOfTypeIndex + 1]);
-            meter.Value = Double.Parse(dataArray[endOfTypeIndex + 2].Replace('.', ','));
-            MeterInProcess = meter;
+            return "Неверно введены данные";
         }
 
     }
