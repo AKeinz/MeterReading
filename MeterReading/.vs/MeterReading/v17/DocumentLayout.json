@@ -3,28 +3,28 @@
   "WorkspaceRootPath": "C:\\Users\\user\\Desktop\\MeterReading\\MeterReading\\MeterReading\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{4D7CE244-F670-45F8-93D2-361E46F5645E}|MeterReading\\MeterReading.csproj|c:\\users\\user\\desktop\\meterreading\\meterreading\\meterreading\\meterreading\\readfromfile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4D7CE244-F670-45F8-93D2-361E46F5645E}|MeterReading\\MeterReading.csproj|solutionrelative:meterreading\\readfromfile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4D7CE244-F670-45F8-93D2-361E46F5645E}|MeterReading\\MeterReading.csproj|c:\\users\\user\\desktop\\meterreading\\meterreading\\meterreading\\meterreading\\stringtometer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4D7CE244-F670-45F8-93D2-361E46F5645E}|MeterReading\\MeterReading.csproj|solutionrelative:meterreading\\stringtometer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4D7CE244-F670-45F8-93D2-361E46F5645E}|MeterReading\\MeterReading.csproj|C:\\Users\\user\\Desktop\\MeterReading\\MeterReading\\MeterReading\\meterreading\\electricitymeter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4D7CE244-F670-45F8-93D2-361E46F5645E}|MeterReading\\MeterReading.csproj|solutionrelative:meterreading\\electricitymeter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4D7CE244-F670-45F8-93D2-361E46F5645E}|MeterReading\\MeterReading.csproj|C:\\Users\\user\\Desktop\\MeterReading\\MeterReading\\MeterReading\\meterreading\\meter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4D7CE244-F670-45F8-93D2-361E46F5645E}|MeterReading\\MeterReading.csproj|solutionrelative:meterreading\\meter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4D7CE244-F670-45F8-93D2-361E46F5645E}|MeterReading\\MeterReading.csproj|C:\\Users\\user\\Desktop\\MeterReading\\MeterReading\\MeterReading\\meterreading\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4D7CE244-F670-45F8-93D2-361E46F5645E}|MeterReading\\MeterReading.csproj|solutionrelative:meterreading\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4D7CE244-F670-45F8-93D2-361E46F5645E}|MeterReading\\MeterReading.csproj|c:\\users\\user\\desktop\\meterreading\\meterreading\\meterreading\\meterreading\\electricitymeter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4D7CE244-F670-45F8-93D2-361E46F5645E}|MeterReading\\MeterReading.csproj|solutionrelative:meterreading\\electricitymeter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4D7CE244-F670-45F8-93D2-361E46F5645E}|MeterReading\\MeterReading.csproj|C:\\Users\\user\\Desktop\\MeterReading\\MeterReading\\MeterReading\\meterreading\\stringtometer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4D7CE244-F670-45F8-93D2-361E46F5645E}|MeterReading\\MeterReading.csproj|solutionrelative:meterreading\\stringtometer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4D7CE244-F670-45F8-93D2-361E46F5645E}|MeterReading\\MeterReading.csproj|C:\\Users\\user\\Desktop\\MeterReading\\MeterReading\\MeterReading\\meterreading\\readfromfile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4D7CE244-F670-45F8-93D2-361E46F5645E}|MeterReading\\MeterReading.csproj|solutionrelative:meterreading\\readfromfile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4D7CE244-F670-45F8-93D2-361E46F5645E}|MeterReading\\MeterReading.csproj|C:\\Users\\user\\Desktop\\MeterReading\\MeterReading\\MeterReading\\meterreading\\watermeter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4D7CE244-F670-45F8-93D2-361E46F5645E}|MeterReading\\MeterReading.csproj|solutionrelative:meterreading\\watermeter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4D7CE244-F670-45F8-93D2-361E46F5645E}|MeterReading\\MeterReading.csproj|C:\\Users\\user\\Desktop\\MeterReading\\MeterReading\\MeterReading\\meterreading\\meter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4D7CE244-F670-45F8-93D2-361E46F5645E}|MeterReading\\MeterReading.csproj|solutionrelative:meterreading\\meter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -43,77 +43,80 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "ReadFromFile.cs",
-              "DocumentMoniker": "C:\\Users\\user\\Desktop\\MeterReading\\MeterReading\\MeterReading\\MeterReading\\ReadFromFile.cs",
-              "RelativeDocumentMoniker": "MeterReading\\ReadFromFile.cs",
-              "ToolTip": "C:\\Users\\user\\Desktop\\MeterReading\\MeterReading\\MeterReading\\MeterReading\\ReadFromFile.cs",
-              "RelativeToolTip": "MeterReading\\ReadFromFile.cs",
-              "ViewState": "AQIAAAcAAAAAAAAAAAAwwA8AAAAiAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-22T05:56:41.786Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
               "Title": "StringToMeter.cs",
               "DocumentMoniker": "C:\\Users\\user\\Desktop\\MeterReading\\MeterReading\\MeterReading\\MeterReading\\StringToMeter.cs",
               "RelativeDocumentMoniker": "MeterReading\\StringToMeter.cs",
               "ToolTip": "C:\\Users\\user\\Desktop\\MeterReading\\MeterReading\\MeterReading\\MeterReading\\StringToMeter.cs",
               "RelativeToolTip": "MeterReading\\StringToMeter.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAIAAAA",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAADQAAAAZAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-21T15:58:57.446Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "WaterMeter.cs",
-              "DocumentMoniker": "C:\\Users\\user\\Desktop\\MeterReading\\MeterReading\\MeterReading\\MeterReading\\WaterMeter.cs",
-              "RelativeDocumentMoniker": "MeterReading\\WaterMeter.cs",
-              "ToolTip": "C:\\Users\\user\\Desktop\\MeterReading\\MeterReading\\MeterReading\\MeterReading\\WaterMeter.cs",
-              "RelativeToolTip": "MeterReading\\WaterMeter.cs",
-              "ViewState": "AQIAAA8AAAAAAAAAAAAYwBoAAABuAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-21T15:58:15.751Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ElectricityMeter.cs",
-              "DocumentMoniker": "C:\\Users\\user\\Desktop\\MeterReading\\MeterReading\\MeterReading\\MeterReading\\ElectricityMeter.cs",
-              "RelativeDocumentMoniker": "MeterReading\\ElectricityMeter.cs",
-              "ToolTip": "C:\\Users\\user\\Desktop\\MeterReading\\MeterReading\\MeterReading\\MeterReading\\ElectricityMeter.cs",
-              "RelativeToolTip": "MeterReading\\ElectricityMeter.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABkAAABuAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-21T15:58:05.154Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\user\\Desktop\\MeterReading\\MeterReading\\MeterReading\\MeterReading\\Program.cs",
-              "RelativeDocumentMoniker": "MeterReading\\Program.cs",
-              "ToolTip": "C:\\Users\\user\\Desktop\\MeterReading\\MeterReading\\MeterReading\\MeterReading\\Program.cs",
-              "RelativeToolTip": "MeterReading\\Program.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAAA4AAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-10T15:25:46.33Z",
+              "WhenOpened": "2024-09-23T05:24:37.555Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
+              "Title": "WaterMeter.cs",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\MeterReading\\MeterReading\\MeterReading\\MeterReading\\WaterMeter.cs",
+              "RelativeDocumentMoniker": "MeterReading\\WaterMeter.cs",
+              "ToolTip": "C:\\Users\\user\\Desktop\\MeterReading\\MeterReading\\MeterReading\\MeterReading\\WaterMeter.cs",
+              "RelativeToolTip": "MeterReading\\WaterMeter.cs",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAxwBUAAAAYAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-23T05:24:45.527Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ReadFromFile.cs",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\MeterReading\\MeterReading\\MeterReading\\MeterReading\\ReadFromFile.cs",
+              "RelativeDocumentMoniker": "MeterReading\\ReadFromFile.cs",
+              "ToolTip": "C:\\Users\\user\\Desktop\\MeterReading\\MeterReading\\MeterReading\\MeterReading\\ReadFromFile.cs",
+              "RelativeToolTip": "MeterReading\\ReadFromFile.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-23T05:24:35.049Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\MeterReading\\MeterReading\\MeterReading\\MeterReading\\Program.cs",
+              "RelativeDocumentMoniker": "MeterReading\\Program.cs",
+              "ToolTip": "C:\\Users\\user\\Desktop\\MeterReading\\MeterReading\\MeterReading\\MeterReading\\Program.cs",
+              "RelativeToolTip": "MeterReading\\Program.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-23T05:24:32.056Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "Meter.cs",
               "DocumentMoniker": "C:\\Users\\user\\Desktop\\MeterReading\\MeterReading\\MeterReading\\MeterReading\\Meter.cs",
               "RelativeDocumentMoniker": "MeterReading\\Meter.cs",
               "ToolTip": "C:\\Users\\user\\Desktop\\MeterReading\\MeterReading\\MeterReading\\MeterReading\\Meter.cs",
               "RelativeToolTip": "MeterReading\\Meter.cs",
-              "ViewState": "AQIAABAAAAAAAAAAAAAkwBsAAAAuAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-17T15:43:46.967Z"
+              "WhenOpened": "2024-09-23T05:24:28.679Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ElectricityMeter.cs",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\MeterReading\\MeterReading\\MeterReading\\MeterReading\\ElectricityMeter.cs",
+              "RelativeDocumentMoniker": "MeterReading\\ElectricityMeter.cs",
+              "ToolTip": "C:\\Users\\user\\Desktop\\MeterReading\\MeterReading\\MeterReading\\MeterReading\\ElectricityMeter.cs",
+              "RelativeToolTip": "MeterReading\\ElectricityMeter.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAuwBUAAAAYAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-23T05:24:24.414Z",
+              "EditorCaption": ""
             }
           ]
         }

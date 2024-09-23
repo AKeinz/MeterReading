@@ -12,7 +12,7 @@ namespace MeterReading
     {
         public static Meter MeterInProcess;
         static bool IsRightInput = false;
-        static List<Meter> meters = new List<Meter>();
+        private static readonly List<Meter> meters = new List<Meter>();
 
         public static bool TrySetMeterData(string input)
         {
@@ -41,13 +41,10 @@ namespace MeterReading
         {
             if (dataArray[0].StartsWith("\'") || dataArray[0].StartsWith("\""))
             {
-                double forTryParseValue;
-                DateTime forTryParseDate;
                 int endOfTypeIndex = Array.FindIndex(dataArray, word => word.EndsWith("\'") || word.EndsWith("\""));
-                bool isTryParseDate = DateTime.TryParse(dataArray[endOfTypeIndex + 1], out forTryParseDate);
-                bool isTryParseValue = Double.TryParse(dataArray[endOfTypeIndex + 2].Replace('.', ','), out forTryParseValue);
-                if ((dataArray.Length - 1) - endOfTypeIndex == 3 && isTryParseDate && isTryParseValue && 
-                    forTryParseValue>=0 && forTryParseDate<DateTime.Now)
+                bool isTryParseDate = DateTime.TryParse(dataArray[endOfTypeIndex + 1], out DateTime forTryParseDate);
+                bool isTryParseValue = Double.TryParse(dataArray[endOfTypeIndex + 2].Replace('.', ','), out double forTryParseValue);
+                if ((dataArray.Length - 1) - endOfTypeIndex == 3 && isTryParseDate && isTryParseValue && forTryParseValue>=0 && forTryParseDate<DateTime.Now)
                 {
                     setMeterData(endOfTypeIndex, dataArray);
                     return true;
@@ -58,18 +55,28 @@ namespace MeterReading
 
         private static void setMeterData(int endOfTypeIndex, string[] dataArray)
         {
-            Meter meter = new ElectricityMeter();
+            Meter meter = defineMeterType(endOfTypeIndex, dataArray);
             MeterInProcess = meter.SetMeterData(endOfTypeIndex, dataArray);
             meters.Add(meter);
         }
-        public static string GetMeterData()
+
+        private static Meter defineMeterType(int endOfTypeIndex, string[] dataArray)
         {
-            if (IsRightInput)
+            if (int.TryParse(dataArray[endOfTypeIndex + 3], out _ ))
             {
-                return MeterInProcess.GetMeterData();
+                return new ElectricityMeter();
             }
-            return "Неверно введены данные";
+            else
+            {
+                return new WaterMeter();
+            }
         }
 
+        public static List<Meter> GetMetersList()
+        {
+            List<Meter> metersList = new List<Meter>();
+            metersList = meters;
+            return metersList;
+        }
     }
 }

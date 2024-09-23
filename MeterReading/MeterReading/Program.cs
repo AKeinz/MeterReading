@@ -11,7 +11,19 @@ namespace MeterReading
         
         static void Main(string[] args)
         {
-            Console.WriteLine(ReadFromFile.ReadFile());
+            string[] dataFromFile = ReadFromFile.ReadFile();
+
+            foreach (string dataMeter in dataFromFile)
+            {
+                StringToMeter.TrySetMeterData(dataMeter);
+            }
+
+            foreach (Meter meter in StringToMeter.GetMetersList())
+            {
+               Console.WriteLine(meter.GetMeterData());
+            }
+
+            Console.ReadLine();
         }
     }
 }
