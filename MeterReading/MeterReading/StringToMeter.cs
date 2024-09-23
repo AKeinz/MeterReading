@@ -28,8 +28,11 @@ namespace MeterReading
             char[] copyData = inputData.ToArray();
             for (int index = 1; index < copyData.Length; index++)
             {
-                if (index == 1 && !copyData[index - 1].Equals(' ')) { data += copyData[index - 1]; }
-                if (!(copyData[index - 1].Equals(' ') && copyData[index].Equals(' ')))
+                if ((index == 1) && (!copyData[index - 1].Equals(' '))) 
+                { 
+                    data += copyData[index - 1]; 
+                }
+                if ((!(copyData[index - 1].Equals(' ')) && (copyData[index].Equals(' '))))
                 {
                     data += copyData[index];
                 }
@@ -39,12 +42,13 @@ namespace MeterReading
 
         private static bool checkData(string[] dataArray)
         {
-            if (dataArray[0].StartsWith("\'") || dataArray[0].StartsWith("\""))
+            if ((dataArray[0].StartsWith("\'")) || (dataArray[0].StartsWith("\"")))
             {
                 int endOfTypeIndex = Array.FindIndex(dataArray, word => word.EndsWith("\'") || word.EndsWith("\""));
                 bool isTryParseDate = DateTime.TryParse(dataArray[endOfTypeIndex + 1], out DateTime forTryParseDate);
                 bool isTryParseValue = Double.TryParse(dataArray[endOfTypeIndex + 2].Replace('.', ','), out double forTryParseValue);
-                if ((dataArray.Length - 1) - endOfTypeIndex == 3 && isTryParseDate && isTryParseValue && forTryParseValue>=0 && forTryParseDate<DateTime.Now)
+                if (((dataArray.Length - 1) - endOfTypeIndex == 3) && (isTryParseDate && isTryParseValue) 
+                    && (forTryParseValue>=0) && (forTryParseDate<DateTime.Now))
                 {
                     setMeterData(endOfTypeIndex, dataArray);
                     return true;

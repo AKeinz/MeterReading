@@ -8,7 +8,6 @@ namespace MeterReading
 {
     internal class Program
     {
-        
         static void Main(string[] args)
         {
             string[] dataFromFile = ReadFromFile.ReadFile();

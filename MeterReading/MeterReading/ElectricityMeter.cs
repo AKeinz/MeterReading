@@ -21,6 +21,7 @@ namespace MeterReading
             MeterNumber = int.Parse(dataArray[endOfTypeIndex + 3]);
             return this;
         }
+
         public override string GetMeterData()
         {
             string output = "ResourceType: " + ResourceType + "\nDate: " + DateOfReading + "\nValue: " + Value
