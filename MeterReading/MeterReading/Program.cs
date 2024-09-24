@@ -16,7 +16,6 @@ namespace MeterReading
             {
                 StringToMeter.TrySetMeterData(dataMeter);
             }
-
             foreach (Meter meter in StringToMeter.GetMetersList())
             {
                Console.WriteLine(meter.GetMeterData());

@@ -18,8 +18,7 @@ namespace MeterReading
         {
             string[] data = toDataArrayWithSingleSpaces(input);
             IsRightInput = checkData(data);
-            if (IsRightInput) { return true; }
-            return false;
+            return IsRightInput;
         }
 
         private static string[] toDataArrayWithSingleSpaces(string inputData)
@@ -32,7 +31,7 @@ namespace MeterReading
                 { 
                     data += copyData[index - 1]; 
                 }
-                if ((!(copyData[index - 1].Equals(' ')) && (copyData[index].Equals(' '))))
+                if (!((copyData[index - 1].Equals(' ')) && (copyData[index].Equals(' '))))
                 {
                     data += copyData[index];
                 }
@@ -47,7 +46,7 @@ namespace MeterReading
                 int endOfTypeIndex = Array.FindIndex(dataArray, word => word.EndsWith("\'") || word.EndsWith("\""));
                 bool isTryParseDate = DateTime.TryParse(dataArray[endOfTypeIndex + 1], out DateTime forTryParseDate);
                 bool isTryParseValue = Double.TryParse(dataArray[endOfTypeIndex + 2].Replace('.', ','), out double forTryParseValue);
-                if (((dataArray.Length - 1) - endOfTypeIndex == 3) && (isTryParseDate && isTryParseValue) 
+                if (((dataArray.Length - 1) - endOfTypeIndex == 3) /*&& (isTryParseDate)*/ && (isTryParseValue) 
                     && (forTryParseValue>=0) && (forTryParseDate<DateTime.Now))
                 {
                     setMeterData(endOfTypeIndex, dataArray);

@@ -9,7 +9,7 @@ namespace MeterReading
 {
     internal class ReadFromFile
     {
-        static string filePath = "C:\\Users\\user\\Desktop\\MeterReading\\MeterReading\\MeterReading\\Data.txt";
+        static string filePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Data.txt");
 
         public static string[] ReadFile()
         {
