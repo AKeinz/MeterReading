@@ -46,7 +46,7 @@ namespace MeterReading
                 int endOfTypeIndex = Array.FindIndex(dataArray, word => word.EndsWith("\'") || word.EndsWith("\""));
                 bool isTryParseDate = DateTime.TryParse(dataArray[endOfTypeIndex + 1], out DateTime forTryParseDate);
                 bool isTryParseValue = Double.TryParse(dataArray[endOfTypeIndex + 2].Replace('.', ','), out double forTryParseValue);
-                if (((dataArray.Length - 1) - endOfTypeIndex == 3) /*&& (isTryParseDate)*/ && (isTryParseValue) 
+                if (((dataArray.Length - 1) - endOfTypeIndex == 3) && (isTryParseDate) && (isTryParseValue) 
                     && (forTryParseValue>=0) && (forTryParseDate<DateTime.Now))
                 {
                     setMeterData(endOfTypeIndex, dataArray);
@@ -65,13 +65,18 @@ namespace MeterReading
 
         private static Meter defineMeterType(int endOfTypeIndex, string[] dataArray)
         {
-            if (int.TryParse(dataArray[endOfTypeIndex + 3], out _ ))
+            string meterType = "";
+            for (int i = 0; i <= endOfTypeIndex; i++)
             {
-                return new ElectricityMeter();
+                meterType += dataArray[i];
+            }
+            if (meterType.Remove(0,1).StartsWith("Elec"))
+            {
+                return new ElectricityMeter() { ResourceType=meterType};
             }
             else
             {
-                return new WaterMeter();
+                return new WaterMeter() { ResourceType=meterType};
             }
         }
 

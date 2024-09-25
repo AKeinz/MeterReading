@@ -1,1 +1,6 @@
 .vs
+obj
+MeterReading.exe
+MeterReading.exe.config
+MeterReading.pdb
+

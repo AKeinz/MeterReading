@@ -12,10 +12,6 @@ namespace MeterReading
 
         public override Meter SetMeterData(int endOfTypeIndex, string[] dataArray)
         {
-            for (int index = 0; index <= endOfTypeIndex; index++)
-            {
-                ResourceType += dataArray[index] + " ";
-            }
             DateOfReading = DateTime.Parse(dataArray[endOfTypeIndex + 1]);
             Value = Double.Parse(dataArray[endOfTypeIndex + 2].Replace('.', ','));
             TypeOfWater = dataArray[endOfTypeIndex + 3];
