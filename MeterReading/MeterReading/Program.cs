@@ -12,10 +12,18 @@ namespace MeterReading
         {
             string[] dataFromFile = ReadFromFile.ReadFile();
 
-            foreach (string dataMeter in dataFromFile)
+            for (int k = 0; k < dataFromFile.Length; k++)
             {
+                string dataMeter = dataFromFile[k];
                 StringToMeter.TrySetMeterData(dataMeter);
+                if (!StringToMeter.IsRightInput)
+                {
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine($"Неверные данные в {k+1} строке! Объект не создан.\n\n");
+                    Console.ResetColor();
+                }
             }
+            Console.WriteLine("---------Список счетчиков---------");
             foreach (Meter meter in StringToMeter.GetMetersList())
             {
                Console.WriteLine(meter.GetMeterData());

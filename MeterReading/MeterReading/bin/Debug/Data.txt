@@ -1,4 +1,12 @@
-'Electricity   '        2024.09.12  45  12
-'Water'   2020.12.22   3434 'Cold'
+'Water' 2018.12.09    783  'cold'
+ 'Electricity'    2024.09.12  45  12
+
+
 'Electricity'        2004.10.12  45  1200023
-'Water'   2020.12.22   3434  'Hot'
+'Electricity  '  2024.10.09  45  1200023
+'Water' 2018.12.09    783  'cold'
+
+
+
+
+

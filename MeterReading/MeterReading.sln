@@ -5,6 +5,8 @@ VisualStudioVersion = 17.10.35013.160
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MeterReading", "MeterReading\MeterReading.csproj", "{4D7CE244-F670-45F8-93D2-361E46F5645E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MeterReadingTests", "UnitTestProject1\MeterReadingTests.csproj", "{A814EBF0-30AB-4C78-8BF7-36D9CF4E5D3A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{4D7CE244-F670-45F8-93D2-361E46F5645E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4D7CE244-F670-45F8-93D2-361E46F5645E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4D7CE244-F670-45F8-93D2-361E46F5645E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A814EBF0-30AB-4C78-8BF7-36D9CF4E5D3A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A814EBF0-30AB-4C78-8BF7-36D9CF4E5D3A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A814EBF0-30AB-4C78-8BF7-36D9CF4E5D3A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A814EBF0-30AB-4C78-8BF7-36D9CF4E5D3A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

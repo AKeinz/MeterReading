@@ -8,10 +8,10 @@ using System.Threading.Tasks;
 
 namespace MeterReading
 {
-    internal class StringToMeter
+    public class StringToMeter
     {
         public static Meter MeterInProcess;
-        static bool IsRightInput = false;
+        public static bool IsRightInput = false;
         private static readonly List<Meter> meters = new List<Meter>();
 
         public static bool TrySetMeterData(string input)
@@ -21,15 +21,17 @@ namespace MeterReading
             return IsRightInput;
         }
 
-        private static string[] toDataArrayWithSingleSpaces(string inputData)
+        public static string[] toDataArrayWithSingleSpaces(string inputData)
         {
             string data = string.Empty;
             char[] copyData = inputData.ToArray();
+
             for (int index = 1; index < copyData.Length; index++)
             {
-                if ((index == 1) && (!copyData[index - 1].Equals(' '))) 
+
+                if ((index == 1) && (!copyData[0].Equals(' '))) 
                 { 
-                    data += copyData[index - 1]; 
+                    data += copyData[0]; 
                 }
                 if (!((copyData[index - 1].Equals(' ')) && (copyData[index].Equals(' '))))
                 {
@@ -39,45 +41,62 @@ namespace MeterReading
             return data.Split(' ');
         }
 
-        private static bool checkData(string[] dataArray)
+        public static bool checkData(string[] dataArray)
         {
-            if ((dataArray[0].StartsWith("\'")) || (dataArray[0].StartsWith("\"")))
+            try
             {
-                int endOfTypeIndex = Array.FindIndex(dataArray, word => word.EndsWith("\'") || word.EndsWith("\""));
-                bool isTryParseDate = DateTime.TryParse(dataArray[endOfTypeIndex + 1], out DateTime forTryParseDate);
-                bool isTryParseValue = Double.TryParse(dataArray[endOfTypeIndex + 2].Replace('.', ','), out double forTryParseValue);
-                if (((dataArray.Length - 1) - endOfTypeIndex == 3) && (isTryParseDate) && (isTryParseValue) 
-                    && (forTryParseValue>=0) && (forTryParseDate<DateTime.Now))
+                if ((dataArray[0].StartsWith("\'")) && (dataArray.Any(type => type.ToUpper().Contains("ELECTRICITY") || type.ToUpper().Contains("WATER"))))
                 {
-                    setMeterData(endOfTypeIndex, dataArray);
-                    return true;
+                    int endOfTypeIndex = Array.FindIndex(dataArray, word => word.EndsWith("\'"));
+                    string type = "";
+                    bool isTryParseDate = DateTime.TryParse(dataArray[endOfTypeIndex + 1], out DateTime forTryParseDate);
+                    bool isTryParseValue = Double.TryParse(dataArray[endOfTypeIndex + 2].Replace('.', ','), out double forTryParseValue);
+                    if (((dataArray.Length - 1) - endOfTypeIndex == 3) && (isTryParseDate) && (isTryParseValue)
+                        && (forTryParseValue >= 0) && (forTryParseDate < DateTime.Now))
+                    {
+                        setMeterData(endOfTypeIndex, dataArray);
+                        return true;
+                    }
                 }
             }
+            catch(NullReferenceException) { return false; }
+            catch (IndexOutOfRangeException) { return false; }
             return false;
         }
 
         private static void setMeterData(int endOfTypeIndex, string[] dataArray)
         {
             Meter meter = defineMeterType(endOfTypeIndex, dataArray);
-            MeterInProcess = meter.SetMeterData(endOfTypeIndex, dataArray);
-            meters.Add(meter);
+            if (meter != null)
+            {
+                MeterInProcess = meter.SetMeterData(endOfTypeIndex, dataArray);
+                meters.Add(meter);
+            }
         }
 
-        private static Meter defineMeterType(int endOfTypeIndex, string[] dataArray)
+        public static Meter defineMeterType(int endOfTypeIndex, string[] dataArray)
         {
             string meterType = "";
             for (int i = 0; i <= endOfTypeIndex; i++)
             {
                 meterType += dataArray[i];
             }
-            if (meterType.Remove(0,1).StartsWith("Elec"))
+            try
             {
-                return new ElectricityMeter() { ResourceType=meterType};
+                if (meterType.Remove(0, 1).StartsWith("Elec"))
+                {
+                    return new ElectricityMeter() { ResourceType = meterType };
+                }
+                else if (meterType.Remove(0, 1).StartsWith("Water") && (dataArray[3].Equals("\'cold\'") || dataArray[3].Equals("\'hot\'")))
+                {
+                    return new WaterMeter() { ResourceType = meterType };
+                }
             }
-            else
+            catch (ArgumentOutOfRangeException)
             {
-                return new WaterMeter() { ResourceType=meterType};
+                return null;
             }
+            return null;
         }
 
         public static List<Meter> GetMetersList()
